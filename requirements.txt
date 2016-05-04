@@ -5,7 +5,6 @@ backports-abc==0.4
 backports.ssl-match-hostname==3.4.0.2
 bdist-mpkg==0.5.0
 beautifulsoup4==4.4.0
-bonjour-py==0.3
 brewer2mpl==1.4.1
 certifi==2015.11.20.1
 cssselect==0.9.1
