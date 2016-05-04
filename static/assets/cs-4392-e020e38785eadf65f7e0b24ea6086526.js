@@ -109,7 +109,7 @@ define('cs-4392/components/map-view', ['exports', 'ember'], function (exports, _
       minor_score: 0,
       serve_score: 0
     },
-    zoom: 10,
+    zoom: 13,
     markers: computed('model.@each.{major_violation_score,serve_violation_score,minor_violation_score', 'score.{major_score,minor_score,serve_score}', function () {
       var list = this.get('model');
       console.log(list);
@@ -931,11 +931,11 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
             "loc": {
               "source": null,
               "start": {
-                "line": 8,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 14,
+                "line": 11,
                 "column": 0
               }
             },
@@ -951,19 +951,19 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
             var el2 = dom.createComment("");
             dom.appendChild(el1, el2);
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n");
+            var el1 = dom.createTextNode("\nCategories: ");
             dom.appendChild(el0, el1);
             var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n");
+            var el1 = dom.createTextNode("\nViolation major: ");
             dom.appendChild(el0, el1);
             var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n");
+            var el1 = dom.createTextNode("\nViolation minor: ");
             dom.appendChild(el0, el1);
             var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("\n");
+            var el1 = dom.createTextNode("\nViolation serve: ");
             dom.appendChild(el0, el1);
             var el1 = dom.createComment("");
             dom.appendChild(el0, el1);
@@ -980,7 +980,7 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
             morphs[4] = dom.createMorphAt(fragment, 8, 8, contextualElement);
             return morphs;
           },
-          statements: [["content", "marker.name", ["loc", [null, [9, 4], [9, 19]]]], ["content", "marker.categories", ["loc", [null, [10, 0], [10, 21]]]], ["content", "marker.major_violation_score", ["loc", [null, [11, 0], [11, 32]]]], ["content", "marker.minor_violation_score", ["loc", [null, [12, 0], [12, 32]]]], ["content", "marker.serve_violation_score", ["loc", [null, [13, 0], [13, 32]]]]],
+          statements: [["content", "marker.name", ["loc", [null, [6, 4], [6, 19]]]], ["content", "marker.categories", ["loc", [null, [7, 12], [7, 33]]]], ["content", "marker.violation_major_score", ["loc", [null, [8, 17], [8, 49]]]], ["content", "marker.violation_minor_score", ["loc", [null, [9, 17], [9, 49]]]], ["content", "marker.violation_serve_score", ["loc", [null, [10, 17], [10, 49]]]]],
           locals: [],
           templates: []
         };
@@ -992,11 +992,11 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
           "loc": {
             "source": null,
             "start": {
-              "line": 5,
+              "line": 2,
               "column": 0
             },
             "end": {
-              "line": 17,
+              "line": 14,
               "column": 0
             }
           },
@@ -1025,7 +1025,7 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
           dom.insertBoundary(fragment, 0);
           return morphs;
         },
-        statements: [["inline", "tile-layer", [], ["url", "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"], ["loc", [null, [6, 0], [6, 79]]]], ["block", "marker-layer", [], ["class", "icon-marker", "lat", ["subexpr", "@mut", [["get", "marker.lat", ["loc", [null, [8, 40], [8, 50]]]]], [], []], "lng", ["subexpr", "@mut", [["get", "marker.lng", ["loc", [null, [8, 55], [8, 65]]]]], [], []]], 0, null, ["loc", [null, [8, 0], [14, 17]]]]],
+        statements: [["inline", "tile-layer", [], ["url", "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"], ["loc", [null, [3, 0], [3, 79]]]], ["block", "marker-layer", [], ["class", "icon-marker", "riseOnHover", true, "lat", ["subexpr", "@mut", [["get", "marker.lat", ["loc", [null, [5, 57], [5, 67]]]]], [], []], "lng", ["subexpr", "@mut", [["get", "marker.lng", ["loc", [null, [5, 72], [5, 82]]]]], [], []]], 0, null, ["loc", [null, [5, 0], [11, 17]]]]],
         locals: [],
         templates: [child0]
       };
@@ -1034,7 +1034,7 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
+          "problems": ["wrong-type"]
         },
         "revision": "Ember@2.4.5",
         "loc": {
@@ -1044,7 +1044,7 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 15,
             "column": 0
           }
         },
@@ -1060,30 +1060,15 @@ define("cs-4392/templates/components/search-item", ["exports"], function (export
         dom.appendChild(el0, el1);
         var el1 = dom.createComment("");
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode(" Lat\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(4);
+        var morphs = new Array(1);
         morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-        morphs[1] = dom.createMorphAt(fragment, 3, 3, contextualElement);
-        morphs[2] = dom.createMorphAt(fragment, 5, 5, contextualElement);
-        morphs[3] = dom.createMorphAt(fragment, 7, 7, contextualElement);
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["content", "marker.lat", ["loc", [null, [2, 0], [2, 14]]]], ["content", "marker.categories", ["loc", [null, [3, 0], [3, 21]]]], ["content", "zoom", ["loc", [null, [4, 0], [4, 8]]]], ["block", "leaflet-map", [], ["lat", ["subexpr", "@mut", [["get", "marker.lat", ["loc", [null, [5, 19], [5, 29]]]]], [], []], "lng", ["subexpr", "@mut", [["get", "marker.lng", ["loc", [null, [5, 34], [5, 44]]]]], [], []], "zoom", ["subexpr", "@mut", [["get", "zoom", ["loc", [null, [5, 50], [5, 54]]]]], [], []]], 0, null, ["loc", [null, [5, 0], [17, 16]]]]],
+      statements: [["block", "leaflet-map", [], ["lat", ["subexpr", "@mut", [["get", "marker.lat", ["loc", [null, [2, 19], [2, 29]]]]], [], []], "lng", ["subexpr", "@mut", [["get", "marker.lng", ["loc", [null, [2, 34], [2, 44]]]]], [], []], "zoom", ["subexpr", "@mut", [["get", "zoom", ["loc", [null, [2, 50], [2, 54]]]]], [], []]], 0, null, ["loc", [null, [2, 0], [14, 16]]]]],
       locals: [],
       templates: [child0]
     };
@@ -1104,7 +1089,7 @@ define("cs-4392/templates/components/spinkit-spinner", ["exports"], function (ex
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 3,
             "column": 2
           }
         },
@@ -1116,72 +1101,10 @@ define("cs-4392/templates/components/spinkit-spinner", ["exports"], function (ex
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createTextNode("\n  ");
+        var el1 = dom.createTextNode("\n    ");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "spinner");
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle1 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle2 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle3 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle4 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle5 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle6 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle7 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle8 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle9 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle10 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle11 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n    ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "circle12 circle");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n  ");
         dom.appendChild(el0, el1);
@@ -1497,8 +1420,7 @@ define("cs-4392/templates/loading", ["exports"], function (exports) {
     return {
       meta: {
         "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
+          "name": "triple-curlies"
         },
         "revision": "Ember@2.4.5",
         "loc": {
@@ -1508,7 +1430,7 @@ define("cs-4392/templates/loading", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 3,
+            "line": 5,
             "column": 0
           }
         },
@@ -1520,19 +1442,25 @@ define("cs-4392/templates/loading", ["exports"], function (exports) {
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "loading-container");
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n\n");
+        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
+        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [0]), 1, 1);
         return morphs;
       },
-      statements: [["content", "spinkit-spinner", ["loc", [null, [1, 0], [1, 19]]]]],
+      statements: [["content", "spinkit-spinner", ["loc", [null, [2, 2], [2, 21]]]]],
       locals: [],
       templates: []
     };
@@ -1788,8 +1716,8 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("cs-4392/app")["default"].create({"name":"cs-4392","version":"0.0.0+34527da4"});
+  require("cs-4392/app")["default"].create({"name":"cs-4392","version":"0.0.0+ca6c52b4"});
 }
 
 /* jshint ignore:end */
-//# sourceMappingURL=static/assets/cs-4392-c8fef0e7580184966be557cf2746f061.map
+//# sourceMappingURL=static/assets/cs-4392-5a12044fe09e63cdbe5cb1c7a0db9c03.map
