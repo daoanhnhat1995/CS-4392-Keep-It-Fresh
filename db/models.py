@@ -15,7 +15,7 @@ import settings
 Base = declarative_base()
 
 def db_connect():
-    return create_engine(URL(**settings.DATABASE))
+    return create_engine(URL("postgres://uzqlfkmjghlxqf:PtM-eop0Gse4fH5W7taOPKrbtX@ec2-54-235-207-226.compute-1.amazonaws.com:5432/db7t89tu8f2tu4"))
 
 
 def create_tables(engine):
