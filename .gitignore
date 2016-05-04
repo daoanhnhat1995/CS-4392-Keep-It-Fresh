@@ -1,0 +1,28 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+/frontend/bower_components
+/frontend/node_modules
+.ipynb_checkpoints/ipynb_checkpoints
+/frontend/tmp
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/frontend/*.txt
+/frontend/dist
+/datasets
+/static
+/frontend/.DStore
+.DS_Store
+.ipynb_checkpoints/
+frontend/
