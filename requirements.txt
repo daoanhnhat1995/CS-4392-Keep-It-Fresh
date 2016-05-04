@@ -59,6 +59,4 @@ scikit-learn==0.16.1
 SQLAlchemy==1.0.12
 traitlets==4.0.0
 ujson==1.35
-vboxapi==1.0
-virtualenv==15.0.1
 yelp==1.0.2
