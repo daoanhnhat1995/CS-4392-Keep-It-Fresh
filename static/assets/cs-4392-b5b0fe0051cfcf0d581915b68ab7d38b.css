@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  color: #5C415D; }
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100%; }
+
+nav.custom-navbar {
+  border-width: 0px;
+  background-color: #5C415D;
+  padding: 0.5em 5em;
+  border-radius: 0px;
+  color: #ffffff; }
+  nav.custom-navbar li h5 {
+    color: white; }
+  nav.custom-navbar .navbar-brand {
+    color: #ffffff; }
+
+.leaflet-container {
+  width: 1050px;
+  height: 550px; }
+
+.leaflet-marker-shadow .leaflet-zoom-animated {
+  background: url("/assets/images/marker-icon.png"); }
+
+.icon-maker {
+  background-color: #C89933; }
+
+.btn-search {
+  background-color: #ffffff; }
+
+.search-area {
+  margin-top: 5%; }
+
+.search-box {
+  font-size: small;
+  padding: 1.5em;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: medium;
+  border-bottom-color: #5C415D;
+  outline-width: 0px; }
+
+/*# sourceMappingURL=static/assets/cs-4392-b5b0fe0051cfcf0d581915b68ab7d38b.css */

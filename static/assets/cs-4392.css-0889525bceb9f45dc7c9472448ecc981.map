@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "cs-4392.css",
+	"sources": [
+		"../../sass_compiler-input_base_path-wf2DuOMb.tmp/0/app/styles/app.scss"
+	],
+	"sourcesContent": [
+		"$purple-dark: #5C415D;\n$purple-light: #694966;\n$purple-super: #74526C;\n$yellow-light: #DBD053;\n$yellow-dark: #C89933;\n$white: #ffffff;\n\n*{\n      box-sizing: border-box;\n      text-align:center;\n      color: $purple-dark;\n}\nbody{\n  margin: 0;\n  padding: 0;\n  display: block;\n  height: 100%;\n}\nnav.custom-navbar{\n  border-width: 0px;\n  background-color: $purple-dark;\n  padding: 0.5em 5em;\n  border-radius:0px;\n  li{\n    h5{\n    color: white;\n  }\n  }\n  .navbar-brand{\n    color: $white;\n  }\n  color: $white;\n}\n.leaflet-container{\n width: 1050px;\n height: 550px;\n}\n\n.leaflet-marker-shadow .leaflet-zoom-animated{\n   background:url('/assets/images/marker-icon.png');\n}\n\n.icon-maker{\n  background-color:$yellow-dark;\n}\n\n.btn-search{\n  background-color: $white;\n}\n\n.search-area{\n  margin-top: 5%;\n}\n.search-box{\n  font-size: small;\n  padding: 1.5em;\n  border-top-width: 0px;\n  border-left-width: 0px;\n  border-right-width: 0px;\n  border-bottom-width: medium;\n  border-bottom-color: $purple-dark;\n  outline-width: 0px;\n}\n\n\n\n"
+	],
+	"mappings": "AAOA,AAAA,CAAC,CAAA;EACK,UAAU,EAAE,UAAW;EACvB,UAAU,EAAC,MAAO;EAClB,KAAK,EAVG,OAAO,GAWpB;;AACD,AAAA,IAAI,CAAA;EACF,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,OAAO,EAAE,KAAM;EACf,MAAM,EAAE,IAAK,GACd;;AACD,AAAG,GAAA,AAAA,cAAc,CAAA;EACf,YAAY,EAAE,GAAI;EAClB,gBAAgB,EApBJ,OAAO;EAqBnB,OAAO,EAAE,SAAU;EACnB,aAAa,EAAC,GAAI;EASlB,KAAK,EA1BC,OAAO,GA2Bd;EAdD,AAMI,GAND,AAAA,cAAc,CAKf,EAAE,CACA,EAAE,CAAA;IACF,KAAK,EAAE,KAAM,GACd;EARH,AAUE,GAVC,AAAA,cAAc,CAUf,aAAa,CAAA;IACX,KAAK,EAxBD,OAAO,GAyBZ;;AAGH,AAAA,kBAAkB,CAAA;EACjB,KAAK,EAAE,MAAO;EACd,MAAM,EAAE,KAAM,GACd;;AAED,AAAuB,sBAAD,CAAC,sBAAsB,CAAA;EAC1C,UAAU,EAAC,qCAAG,GAChB;;AAED,AAAA,WAAW,CAAA;EACT,gBAAgB,EAvCJ,OAAO,GAwCpB;;AAED,AAAA,WAAW,CAAA;EACT,gBAAgB,EA1CV,OAAO,GA2Cd;;AAED,AAAA,YAAY,CAAA;EACV,UAAU,EAAE,EAAG,GAChB;;AACD,AAAA,WAAW,CAAA;EACT,SAAS,EAAE,KAAM;EACjB,OAAO,EAAE,KAAM;EACf,gBAAgB,EAAE,GAAI;EACtB,iBAAiB,EAAE,GAAI;EACvB,kBAAkB,EAAE,GAAI;EACxB,mBAAmB,EAAE,MAAO;EAC5B,mBAAmB,EA5DP,OAAO;EA6DnB,aAAa,EAAE,GAAI,GACpB",
+	"names": []
+}
