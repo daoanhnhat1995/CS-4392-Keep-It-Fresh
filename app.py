@@ -21,6 +21,12 @@ def api_businesses():
     result =  json.dumps({'businesses':[dict(r) for r in violations]})
     return result
 
+@app.route('/test')
+def api_test():
+    query = text('SELECT * from businesses')
+    res = engine.execute(query)
+    return json.dumps([dict(r) for r in res])
+
 @app.route('/search',methods=['GET'])
 def api_search():
     """Search for a restaurant with its business id (end of yelp url)
