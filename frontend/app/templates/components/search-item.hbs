@@ -1,0 +1,17 @@
+
+{{marker.lat}} Lat
+{{marker.categories}}
+{{zoom}}
+{{#leaflet-map lat=marker.lat lng=marker.lng zoom=zoom }}
+{{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+{{#marker-layer class="icon-marker" lat=marker.lat lng=marker.lng}}
+<h3>{{marker.name}}</h3>
+{{marker.categories}}
+{{marker.major_violation_score}}
+{{marker.minor_violation_score}}
+{{marker.serve_violation_score}}
+{{/marker-layer}}
+
+
+{{/leaflet-map}}

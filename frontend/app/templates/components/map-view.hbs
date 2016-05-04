@@ -1,0 +1,26 @@
+
+<label> Major score </label>
+{{input value=score.major_score }} {{score.major_score}}
+<label> Minor score </label>
+{{input value=score.minor_score }} {{score.minor_score}}
+<label> Serve score </label>
+{{input value=score.serve_score }} {{score.serve_score}}
+
+
+
+{{#leaflet-map lat=mark.latitude lng=mark.longitude zoom=zoom }}
+{{!-- Specify child layer components here --}}
+{{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+{{#marker-cluster-layer}}
+{{#each markers as |marker|}}
+{{#marker-layer class="icon-marker" lat=marker.latitude lng=marker.longitude}}
+<h3>{{marker.name}}</h3>
+{{marker.major_violation_score}}
+{{marker.minor_violation_score}}
+{{marker.serve_violation_score}}
+{{/marker-layer}}
+{{/each}}
+{{/marker-cluster-layer}}
+
+
+{{/leaflet-map}}

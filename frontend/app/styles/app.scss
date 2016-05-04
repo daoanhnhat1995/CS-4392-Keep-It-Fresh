@@ -1,0 +1,66 @@
+$purple-dark: #5C415D;
+$purple-light: #694966;
+$purple-super: #74526C;
+$yellow-light: #DBD053;
+$yellow-dark: #C89933;
+$white: #ffffff;
+
+*{
+      box-sizing: border-box;
+      text-align:center;
+      color: $purple-dark;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+nav.custom-navbar{
+  border-width: 0px;
+  background-color: $purple-dark;
+  padding: 0.5em 5em;
+  border-radius:0px;
+  li{
+    h5{
+    color: white;
+  }
+  }
+  .navbar-brand{
+    color: $white;
+  }
+  color: $white;
+}
+.leaflet-container{
+ width: 1050px;
+ height: 550px;
+}
+
+.leaflet-marker-shadow .leaflet-zoom-animated{
+   background:url('/assets/images/marker-icon.png');
+}
+
+.icon-maker{
+  background-color:$yellow-dark;
+}
+
+.btn-search{
+  background-color: $white;
+}
+
+.search-area{
+  margin-top: 5%;
+}
+.search-box{
+  font-size: small;
+  padding: 1.5em;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: medium;
+  border-bottom-color: $purple-dark;
+  outline-width: 0px;
+}
+
+
+
