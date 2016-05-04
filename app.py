@@ -48,5 +48,5 @@ def index():
     return send_from_directory(current_app._static_folder,'index.html')
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run()
 
