@@ -19,7 +19,6 @@ def api_businesses():
     query = text('SELECT b.business_id as id, b.name, b.longitude, b.latitude, b.categories, b.attributes, v.minor_violation_score, v.major_violation_score,v.serve_violation_score from businesses as b inner join maps as m on m.business_id = b.business_id inner join violations as v on v.restaurant_id = m.restaurant_id')
     violations = engine.execute(query)
     result =  json.dumps({'businesses':[dict(r) for r in violations]})
-    result = json.dumps({'businesses':data})
     return result
 
 @app.route('/search',methods=['GET'])
@@ -48,7 +47,6 @@ def api_search():
 def index():
     return send_from_directory(current_app._static_folder,'index.html')
 
-app.debug = True
-#if __name__ == '__main__':
-#    app.run(port=8000)
+if __name__ == '__main__':
+    app.run(port=8000)
 

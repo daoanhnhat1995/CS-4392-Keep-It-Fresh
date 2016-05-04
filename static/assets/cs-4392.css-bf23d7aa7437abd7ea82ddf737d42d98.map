@@ -2,7 +2,7 @@
 	"version": 3,
 	"file": "cs-4392.css",
 	"sources": [
-		"../../sass_compiler-input_base_path-wf2DuOMb.tmp/0/app/styles/app.scss"
+		"../../sass_compiler-input_base_path-wOC3qtQt.tmp/0/app/styles/app.scss"
 	],
 	"sourcesContent": [
 		"$purple-dark: #5C415D;\n$purple-light: #694966;\n$purple-super: #74526C;\n$yellow-light: #DBD053;\n$yellow-dark: #C89933;\n$white: #ffffff;\n\n*{\n      box-sizing: border-box;\n      text-align:center;\n      color: $purple-dark;\n}\nbody{\n  margin: 0;\n  padding: 0;\n  display: block;\n  height: 100%;\n}\nnav.custom-navbar{\n  border-width: 0px;\n  background-color: $purple-dark;\n  padding: 0.5em 5em;\n  border-radius:0px;\n  li{\n    h5{\n    color: white;\n  }\n  }\n  .navbar-brand{\n    color: $white;\n  }\n  color: $white;\n}\n.leaflet-container{\n width: 1050px;\n height: 550px;\n}\n\n.leaflet-marker-shadow .leaflet-zoom-animated{\n   background:url('/assets/images/marker-icon.png');\n}\n\n.icon-maker{\n  background-color:$yellow-dark;\n}\n\n.btn-search{\n  background-color: $white;\n}\n\n.search-area{\n  margin-top: 5%;\n}\n.search-box{\n  font-size: small;\n  padding: 1.5em;\n  border-top-width: 0px;\n  border-left-width: 0px;\n  border-right-width: 0px;\n  border-bottom-width: medium;\n  border-bottom-color: $purple-dark;\n  outline-width: 0px;\n}\n\n\n\n"

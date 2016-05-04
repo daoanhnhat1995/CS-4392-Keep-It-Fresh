@@ -246,9 +246,10 @@ define('cs-4392/controllers/home', ['exports', 'ember'], function (exports, _emb
         var self = this;
         var url = this.get('url').split("/");
         url = url[url.length - 1];
+        var host = "http://" + window.location.host;
 
         $.ajax({
-          url: 'http://localhost:8000/search?name=' + url,
+          url: host + '/search?name=' + url,
           type: 'GET'
         }).then(function (data) {
           var jdata = JSON.parse(data);
@@ -1787,8 +1788,8 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("cs-4392/app")["default"].create({"name":"cs-4392","version":"0.0.0+029061fa"});
+  require("cs-4392/app")["default"].create({"name":"cs-4392","version":"0.0.0+7e9a2d29"});
 }
 
 /* jshint ignore:end */
-//# sourceMappingURL=static/assets/cs-4392-ac43bc5bbe2b4811e50ff90708657057.map
+//# sourceMappingURL=static/assets/cs-4392-ba42d8b5abd1d351d4af6904b40568f9.map

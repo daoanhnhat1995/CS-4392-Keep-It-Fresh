@@ -21,8 +21,6 @@ testem.log
 /frontend/*.txt
 /frontend/dist
 /datasets
-/static
 /frontend/.DStore
 .DS_Store
 .ipynb_checkpoints/
-frontend/
