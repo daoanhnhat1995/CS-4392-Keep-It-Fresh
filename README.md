@@ -1,6 +1,6 @@
 # Cs-4392
 Health inspection score project
-
+![screenshot] (https://github.com/daoanhnhat1995/CS-4392-Keep-It-Fresh/blob/master/screenshots/screenshot.png)
 
 ## Installation
 
